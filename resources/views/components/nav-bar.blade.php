@@ -4,7 +4,7 @@
     class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-lg rounded-2xl w-[95%] max-w-screen-xl mx-auto">
   <nav class="flex flex-wrap items-center justify-between p-4">
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Logo" />
+      <img src="{{ assets(Dziqr) }}" class="h-8" alt="Logo" />
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
     </a>
     <button @click="open = !open" type="button"
