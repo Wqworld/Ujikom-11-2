@@ -7,3 +7,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[userController::class,'index'])->name('beranda');
 
 Route::get('/produk',[hewanController::class,'index'])->name('beranda.produk');
+Route::get('/layanan',[hewanController::class,'layanan'])->name('beranda.layanan');

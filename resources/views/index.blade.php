@@ -5,18 +5,37 @@
         <div class="absolute inset-0 -z-10">
             <div class="w-64 h-64 bg-blue-100 rounded-xl absolute top-10 left-10"></div>
             <div class="w-40 h-40 bg-pink-100 rounded-xl absolute bottom-10 right-10"></div>
-            <div class="w-40 h-80 bg-gray-800 rounded-r-full absolute top-150"></div>
+            <div class="w-40 h-80 bg-gray-800 rounded-r-full absolute top-155"></div>
             <div class="w-40 h-80 bg-gray-500 rounded-l-full absolute xl:top-250 sm:top-300 top-330 right-0"></div>
         </div>
     </div>
     <div class="bg-gray-400 bottom-50 relative xl:mx-20 sm:mx-3 md:mx-10 mx-2 rounded-2xl shadow-2xl
 {{-- buat matok aja itumahh --}}
-h-100
 ">
         {{-- Header Content --}}
+        <div class="flex flex-col-reverse xl:flex-row items-center px-6 py-10 lg:px-30 lg:py-24">
+            <div class="text-center lg:text-left">
+                <h1 class="font-bold text-white text-4xl sm:text-5xl lg:text-6xl" data-aos="fade-right"
+                    data-aos-duration="640">Dziqqir Aqiqah & Qurban</h1>
+                <p class="my-5 text-lg sm:text-xl lg:text-2xl font-extralight text-white">
+                    Selamat Datang di Dziqqir website - Layanan Akikah dan Qurban Terpercaya.
+                    Kami Hadir untuk memberikan layanan Akikah dan Qurban yang aman, mudah, dan sesuai dengan syariat
+                    Islam.
+                    Melalui platform kami, Anda dapat melaksanakan ibadah Akikah dan Qurban dengan cara praktis,
+                    mulai dari pemesanan hingga pengiriman daging kepada yang berhak.
+                </p>
+            </div>
+            <div class="lg:w-1/2 mb-8 lg:mb-0 flex justify-center">
+                <img src="{{ asset('assets/logoDomba.png') }}" alt="logoDomba"
+                    class="w-2/3 sm:w-1/2 lg:w-full  max-w-sm">
+            </div>
+        </div>
+
+
     </div>
+
     {{-- Layanan --}}
-    <div class="mx-10 my-30">
+    <div class="mx-10 xl:my-30 my-10">
         {{-- judul layanan --}}
         <h1 class="text-center font-bold xl:text-5xl md:text-4xl text-3xl  hover:text-gray-500 xl:backdrop-blur xl:bg-transparent bg-gray-400 rounded-2xl"
             data-aos="fade-down">
@@ -32,10 +51,10 @@ h-100
               opacity-0 animate-fade-up card-delay-1" data-aos="fade-down" data-aos-easing="linear"
                 data-aos-duration="840">
 
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-                    acquisitions 2021</h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-                    acquisitions of 2021 so far, in reverse chronological order.</p>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Layanan Akikah:</h5>
+                <p class="text-gray-700 text-2 dark:text-gray-400">
+                    Pilihan jenis kambing dan harga<br><br>
+                    Sertifikat akikah dan dokumentasi</p>
             </a>
 
             {{-- Card 2 --}}
@@ -44,10 +63,14 @@ h-100
               opacity-0 animate-fade-up card-delay-2" data-aos="fade-down" data-aos-easing="linear"
                 data-aos-duration="840">
 
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-                    acquisitions 2021</h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-                    acquisitions of 2021 so far, in reverse chronological order.</p>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Layanan Qurban:</h5>
+                <p class="font-normal text-gray-700 dark:text-gray-400">
+                    Qurban perorangan & patungan (sapi/kambing)<br><br>
+
+                    Penyaluran qurban ke daerah yang membutuhkan<br><br>
+
+                    Laporan distribusi
+                </p>
             </a>
 
             {{-- Card 3 --}}
@@ -56,22 +79,98 @@ h-100
               opacity-0 animate-fade-up card-delay-3" data-aos="fade-down" data-aos-easing="linear"
                 data-aos-duration="840">
 
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-                    acquisitions 2021</h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-                    acquisitions of 2021 so far, in reverse chronological order.</p>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Catering syukuran
+                    akikah</h5>
+                <p class="font-normal text-gray-700 dark:text-gray-400">
+                    Pengiriman makanan ke rumah/domisili
+
+                    Konsultasi syariah
+                </p>
             </a>
         </div>
     </div>
 
-    <div class="bg-gray-800 h-50">
-        <h1>Akikah Dziqqir</h1>
-        <p>Akikah adalah sunnah yang dianjurkan untuk dilakukan oleh orang tua ketika bayi lahir. Proses akikah meliputi
-            penyembelihan hewan (biasanya Kambing atau domba) sebagai tanda syukur atas kelahiran anak, sekaligus untuk
-            mendoakan anak agar tumbuh sehat dan berkah. kami menyediakan layanan akikah yang mudah,aman dan sesuai
-            dengan ketentuan syariat islam </p>
 
-            
+    <div class="relative">
+        <div class="absolute inset-0 z-10">
+            <div class="w-100 h-15 bg-gray-700 rounded-r-full absolute xl:top-13 md:top-33 top-33">
+                <img src="{{ asset('assets/Dziqqir Logo.png ') }}" class="xl:w-70 w-70 mx-2" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+
+        <div class="bg-gray-500 mt-50 flex">
+            {{-- Container deks akikah --}}
+            <div class="xl:px-40 px-10 pt-20 w-400">
+                <h1 class="font-bold xl:text-7xl md:text-6xl text-5xl text-white m-4">Aqiqah Dziqqir</h1>
+                <p>Akikah adalah sunnah yang dianjurkan untuk dilakukan oleh orang tua ketika bayi lahir. Proses akikah
+                    meliputi
+                    penyembelihan hewan (biasanya Kambing atau domba) sebagai tanda syukur atas kelahiran anak,
+                    sekaligus
+                    untuk
+                    mendoakan anak agar tumbuh sehat dan berkah. kami menyediakan layanan akikah yang mudah,aman dan
+                    sesuai
+                    dengan ketentuan syariat islam </p>
+                <a href="https://www.detik.com/hikmah/khazanah/d-7551232/aqiqah-pengertian-dalil-dan-syaratnya">
+                    <button
+                        class="inline-block cursor-pointer items-center justify-center rounded-xl border-[1.58px] mt-5   border-zinc-600 bg-zinc-950 px-5 py-3 font-medium text-slate-200 shadow-md transition-all duration-300 hover:[transform:translateY(-.335rem)] hover:shadow-xl">
+                        Lebih lanjut
+                        <span class="text-slate-300/85">--Aqiqah</span>
+                    </button>
+                </a>
+
+            </div>
+        </div>
+
+
+        <div class="bg-gray-500 mt-50 flex">
+            {{-- Container deks akikah --}}
+            <div class="xl:px-40 px-10 pt-20 w-400">
+                <h1 class="font-bold xl:text-7xl md:text-6xl text-5xl text-white m-4">Aqiqah Dziqqir</h1>
+                <p>Akikah adalah sunnah yang dianjurkan untuk dilakukan oleh orang tua ketika bayi lahir. Proses akikah
+                    meliputi
+                    penyembelihan hewan (biasanya Kambing atau domba) sebagai tanda syukur atas kelahiran anak,
+                    sekaligus
+                    untuk
+                    mendoakan anak agar tumbuh sehat dan berkah. kami menyediakan layanan akikah yang mudah,aman dan
+                    sesuai
+                    dengan ketentuan syariat islam </p>
+                <a href="https://www.detik.com/hikmah/khazanah/d-7551232/aqiqah-pengertian-dalil-dan-syaratnya">
+                    <button
+                        class="inline-block cursor-pointer items-center justify-center rounded-xl border-[1.58px] mt-5   border-zinc-600 bg-zinc-950 px-5 py-3 font-medium text-slate-200 shadow-md transition-all duration-300 hover:[transform:translateY(-.335rem)] hover:shadow-xl">
+                        Lebih lanjut
+                        <span class="text-slate-300/85">--Aqiqah</span>
+                    </button>
+                </a>
+
+            </div>
+        </div>
+
+        
+        <div class="bg-gray-500">
+            {{-- Container deks akikah --}}
+            <div class="xl:px-40 px-10 pt-20 w-400">
+                <h1 class="font-bold xl:text-7xl md:text-6xl text-5xl text-white m-4">Aqiqah Dziqqir</h1>
+                <p>Akikah adalah sunnah yang dianjurkan untuk dilakukan oleh orang tua ketika bayi lahir. Proses akikah
+                    meliputi
+                    penyembelihan hewan (biasanya Kambing atau domba) sebagai tanda syukur atas kelahiran anak,
+                    sekaligus
+                    untuk
+                    mendoakan anak agar tumbuh sehat dan berkah. kami menyediakan layanan akikah yang mudah,aman dan
+                    sesuai
+                    dengan ketentuan syariat islam </p>
+                <a href="https://www.detik.com/hikmah/khazanah/d-7551232/aqiqah-pengertian-dalil-dan-syaratnya">
+                    <button
+                        class="inline-block cursor-pointer items-center justify-center rounded-xl border-[1.58px] mt-5   border-zinc-600 bg-zinc-950 px-5 py-3 font-medium text-slate-200 shadow-md transition-all duration-300 hover:[transform:translateY(-.335rem)] hover:shadow-xl">
+                        Lebih lanjut
+                        <span class="text-slate-300/85">--Aqiqah</span>
+                    </button>
+                </a>
+
+            </div>
+        </div>
     </div>
 
 </x-layout>

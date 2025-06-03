@@ -12,7 +12,8 @@
     <title>Document</title>
 </head>
 
-<body class="bg-gray-200">
+<body class="bg-gray-200 font-poppins">
+    
     {{ $slot }}
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
