@@ -14,6 +14,10 @@ class hewanController extends Controller
         return view("produk");
     }
 
+        public function layanan()
+    {
+        return view("layanan");
+    }
     /**
      * Show the form for creating a new resource.
      */
