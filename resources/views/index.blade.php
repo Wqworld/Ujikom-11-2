@@ -82,7 +82,7 @@
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Catering syukuran
                     akikah</h5>
                 <p class="font-normal text-gray-700 dark:text-gray-400">
-                    Pengiriman makanan ke rumah/domisili
+                    Pengiriman makanan ke rumah/domisili <br><br>
 
                     Konsultasi syariah
                 </p>
@@ -99,13 +99,19 @@
         </div>
     </div>
 
-    <div class="">
+    {{-- Container deks akikah --}}
+    <div class="relative">
 
-        <div class="bg-gray-500 mt-50 flex">
-            {{-- Container deks akikah --}}
+        {{-- Hiasan kotak kotak di bawah tulisan --}}
+        <div class="absolute inset-0 -z-0">
+            <div class="w-64 h-64 bg-blue-100 rounded-xl absolute top-10 left-10"></div>
+        </div>
+
+        <div class="bg-gray-500 mt-50 flex border-b-4 pb-15">
             <div class="xl:px-40 px-10 pt-20 w-400">
-                <h1 class="font-bold xl:text-7xl md:text-6xl text-5xl text-white m-4">Aqiqah Dziqqir</h1>
-                <p>Akikah adalah sunnah yang dianjurkan untuk dilakukan oleh orang tua ketika bayi lahir. Proses akikah
+                <h1 class="font-bold xl:text-7xl md:text-6xl text-4xl text-white m-4">Aqiqah Dziqqir</h1>
+                <p class="xl:text-2xl">Akikah adalah sunnah yang dianjurkan untuk dilakukan oleh orang tua ketika bayi
+                    lahir. Proses akikah
                     meliputi
                     penyembelihan hewan (biasanya Kambing atau domba) sebagai tanda syukur atas kelahiran anak,
                     sekaligus
@@ -125,52 +131,108 @@
         </div>
 
 
-        <div class="bg-gray-500 mt-50 flex">
+        <div class="bg-gray-500 flex justify-end pb-15 ">
             {{-- Container deks akikah --}}
-            <div class="xl:px-40 px-10 pt-20 w-400">
-                <h1 class="font-bold xl:text-7xl md:text-6xl text-5xl text-white m-4">Aqiqah Dziqqir</h1>
-                <p>Akikah adalah sunnah yang dianjurkan untuk dilakukan oleh orang tua ketika bayi lahir. Proses akikah
-                    meliputi
-                    penyembelihan hewan (biasanya Kambing atau domba) sebagai tanda syukur atas kelahiran anak,
-                    sekaligus
-                    untuk
-                    mendoakan anak agar tumbuh sehat dan berkah. kami menyediakan layanan akikah yang mudah,aman dan
-                    sesuai
-                    dengan ketentuan syariat islam </p>
+            <div class="xl:px-40 px-10 pt-20  text-right xl:backdrop-blur xl:bg-transparent">
+                <h1 class="font-bold xl:text-7xl md:text-6xl text-4xl text-white m-4">Qurban Dziqqir</h1>
+                <p class="xl:text-2xl">
+                    Qurban (atau kurban dalam Bahasa Indonesia) adalah ibadah menyembelih hewan ternak tertentu pada
+                    hari raya Idul Adha sebagai bentuk mendekatkan diri kepada Allah SWT. Ibadah ini sangat dianjurkan
+                    bagi umat Islam sebagai bentuk syukur atas nikmat yang diberikan Allah SWT
+                </p>
                 <a href="https://www.detik.com/hikmah/khazanah/d-7551232/aqiqah-pengertian-dalil-dan-syaratnya">
                     <button
-                        class="inline-block cursor-pointer items-center justify-center rounded-xl border-[1.58px] mt-5   border-zinc-600 bg-zinc-950 px-5 py-3 font-medium text-slate-200 shadow-md transition-all duration-300 hover:[transform:translateY(-.335rem)] hover:shadow-xl">
+                        class="inline-block cursor-pointer items-center justify-center rounded-xl border-[1.58px] mt-5 border-zinc-600 bg-zinc-950 px-5 py-3 font-medium text-slate-200 shadow-md transition-all duration-300 hover:[transform:translateY(-.335rem)] hover:shadow-xl">
                         Lebih lanjut
                         <span class="text-slate-300/85">--Aqiqah</span>
                     </button>
                 </a>
-
-            </div>
-        </div>
-
-        
-        <div class="bg-gray-500">
-            {{-- Container deks akikah --}}
-            <div class="xl:px-40 px-10 pt-20 w-400">
-                <h1 class="font-bold xl:text-7xl md:text-6xl text-5xl text-white m-4">Aqiqah Dziqqir</h1>
-                <p>Akikah adalah sunnah yang dianjurkan untuk dilakukan oleh orang tua ketika bayi lahir. Proses akikah
-                    meliputi
-                    penyembelihan hewan (biasanya Kambing atau domba) sebagai tanda syukur atas kelahiran anak,
-                    sekaligus
-                    untuk
-                    mendoakan anak agar tumbuh sehat dan berkah. kami menyediakan layanan akikah yang mudah,aman dan
-                    sesuai
-                    dengan ketentuan syariat islam </p>
-                <a href="https://www.detik.com/hikmah/khazanah/d-7551232/aqiqah-pengertian-dalil-dan-syaratnya">
-                    <button
-                        class="inline-block cursor-pointer items-center justify-center rounded-xl border-[1.58px] mt-5   border-zinc-600 bg-zinc-950 px-5 py-3 font-medium text-slate-200 shadow-md transition-all duration-300 hover:[transform:translateY(-.335rem)] hover:shadow-xl">
-                        Lebih lanjut
-                        <span class="text-slate-300/85">--Aqiqah</span>
-                    </button>
-                </a>
-
             </div>
         </div>
     </div>
 
+
+    {{-- Dokumentasi atau Galeri --}}
+    <div class="relative h-340">
+        {{-- Judul Galeri --}}
+        <h1
+            class="text-center font-bold xl:text-5xl md:text-4xl text-3xl hover:text-gray-500 xl:backdrop-blur xl:bg-transparent bg-gray-400 rounded-2xl m-10 pt-10">
+            dokumentasi 📸</h1>
+        {{-- hiasan kotak d belakang --}}
+        <div class="absolute inset-0 -z-10">
+            <div class="w-64 h-64 bg-gray-600 rounded-xl absolute top-10 left-10"></div>
+            <div class="w-40 h-40 bg-gray-500 rounded-xl absolute bottom-10 right-10"></div>
+            <div class="w-40 h-40 bg-gray-500 rounded-xl absolute  right-10"></div>
+            <div class="w-70 h-70 bg-gray-500 rounded-xl absolute bottom-90 right-140"></div>
+            <div class="w-70 h-70 bg-gray-500 rounded-xl absolute bottom-20 left-130"></div>
+            <div class="w-64 h-64 bg-gray-600 rounded-xl absolute top-50 left-50"></div>
+            {{-- <div class="w-40 h-80 bg-gray-800 rounded-r-full absolute top-155"></div>
+            <div class="w-40 h-80 bg-gray-500 rounded-l-full absolute xl:top-250 sm:top-300 top-330 right-0"></div> --}}
+        </div>
+
+
+        <div class="flex justify-center items-center min-h-screen">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-400">
+                <div class="grid gap-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <x-footer></x-footer>
 </x-layout>

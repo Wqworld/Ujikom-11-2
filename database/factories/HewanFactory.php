@@ -22,7 +22,7 @@ class HewanFactory extends Factory
             "jenis" => $this->faker->randomElement(['Kambing','Sapi','Domba']),
             "status" => $this->faker->randomElement(['Ready','Tidak Ready']),
             "deks_Hewan" => $this->faker->paragraph(2),
-            "gambar" => $this->faker->imageUrl(360, 360, 'animals', true, 'Kambing', true, 'jpg'),
+            "gambar" => asset('assets/no foto yet.jpg'),
             "umur_hewan" => $this->faker->numberBetween(1, 5),
             "kesehatan"=> $this->faker->word,
             "harga_hewan" => $this->faker->numberBetween(1000, 10000),
