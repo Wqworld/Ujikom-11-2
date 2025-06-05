@@ -11,7 +11,7 @@
         </div>
 
         {{-- container card Hewan --}}
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-30">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 p-30">
 
             <div
                 class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-900 dark:border-gray-300 ">

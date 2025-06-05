@@ -2,28 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Admin;
+use App\Models\Penjual;
 use Illuminate\Http\Request;
 
-class hewanController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view("produk");
+        return view("admin.index");
     }
 
-        public function layanan()
-    {
-        return view("layanan");
-    }
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        return view("hewan.create");
+        //
     }
 
     /**

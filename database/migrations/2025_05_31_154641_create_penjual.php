@@ -19,6 +19,8 @@ return new class extends Migration
             $table->date('tanggal_masuk_hewan');
             $table->string('nomor_hp');
             $table->string('alamat_penjual');
+            $table->string('username');
+            $table->string('password');
             $table->timestamps();
         });
     }
