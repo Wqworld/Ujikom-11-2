@@ -23,7 +23,8 @@ class PenjualFactory extends Factory
             "tanggal_masuk_hewan" => $this->faker->dateTime(),
             "nomor_hp" => $this->faker->randomNumber(9, true),
             "alamat_penjual" => $this->faker->address(),
-
+            "username" => $this->faker->word(),
+            "password" => $this->faker->word(),
         ];
     }
 }

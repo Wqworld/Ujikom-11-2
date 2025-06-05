@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Admin;
 use App\Models\Hewan;
+use App\Models\Penjual;
 use Illuminate\Http\Request;
 
 class userController extends Controller
@@ -16,6 +18,36 @@ class userController extends Controller
         return view("index", compact("hewan"));
     }
 
+    public function loginform(){
+        return view("login");
+    }
+
+    public function login(Request $request){
+        
+        $validateData = $request->validate([
+            "username" => "required",
+            "password"=> "required",
+        ]);
+
+        $admin = Admin::where("username", $request->username)->where("password", $request->password)->first();
+        $penjual = Penjual::where("username", $request->username)->where("password",$request->password)->first();
+
+        if ($admin) {
+            session(['username' => $admin->username]);
+            // Alert::success('Hallo Admin', 'Kamu berasil login sebagai admin');
+            $identitasAdmin = Admin::where('username', $request->username)->where('password', $request->password)->first();
+            return redirect('/admin', compact('identitasAdmin'));
+
+        } else if ($penjual){
+            session(['username' => $penjual->username]);
+            $identitasPenjual = Penjual::where('username', $request->username)->where('password', $request->password)->first();
+            $penjual = $identitasPenjual;
+            // Alert::success('Hallo Admin', 'Kamu berasil login sebagai admin');
+            return redirect()->route('beranda.penjual');
+            // return view('penjual.index', compact('penjual'));
+        }
+
+    }
     /**
      * Show the form for creating a new resource.
      */

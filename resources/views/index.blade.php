@@ -5,8 +5,11 @@
         <div class="absolute inset-0 -z-10">
             <div class="w-64 h-64 bg-blue-100 rounded-xl absolute top-10 left-10"></div>
             <div class="w-40 h-40 bg-pink-100 rounded-xl absolute bottom-10 right-10"></div>
-            <div class="w-40 h-80 bg-gray-800 rounded-r-full absolute top-155"></div>
+            <div class="w-80 h-80 bg-gray-800 rounded-full absolute top-155"></div>
             <div class="w-40 h-80 bg-gray-500 rounded-l-full absolute xl:top-250 sm:top-300 top-330 right-0"></div>
+            <div class="w-80 h-80 bg-gray-400 rounded-2xl absolute xl:top-250 sm:top-300 top-400 left-20"></div>  
+            {{-- <div class="w-80 h-80 bg-gray-300 rounded-2xl absolute xl:top-200  sm:top-300 left-260"></div>   --}}
+
         </div>
     </div>
     <div class="bg-gray-400 bottom-50 relative xl:mx-20 sm:mx-3 md:mx-10 mx-2 rounded-2xl shadow-2xl
@@ -15,9 +18,9 @@
         {{-- Header Content --}}
         <div class="flex flex-col-reverse xl:flex-row items-center px-6 py-10 lg:px-30 lg:py-24">
             <div class="text-center lg:text-left">
-                <h1 class="font-bold text-white text-4xl sm:text-5xl lg:text-6xl" data-aos="fade-right"
-                    data-aos-duration="640">Dziqqir Aqiqah & Qurban</h1>
-                <p class="my-5 text-lg sm:text-xl lg:text-2xl font-extralight text-white">
+                <h1 class="font-bold text-white text-4xl sm:text-5xl lg:text-6xl" data-aos="fade-right" 
+                    data-aos-duration="1000">Dziqqir Aqiqah & Qurban</h1>
+                <p class="my-5 text-lg sm:text-xl lg:text-2xl font-extralight text-white" data-aos="fade-right" data-aos-duration="1200">
                     Selamat Datang di Dziqqir website - Layanan Akikah dan Qurban Terpercaya.
                     Kami Hadir untuk memberikan layanan Akikah dan Qurban yang aman, mudah, dan sesuai dengan syariat
                     Islam.
@@ -27,7 +30,7 @@
             </div>
             <div class="lg:w-1/2 mb-8 lg:mb-0 flex justify-center">
                 <img src="{{ asset('assets/logoDomba.png') }}" alt="logoDomba"
-                    class="w-2/3 sm:w-1/2 lg:w-full  max-w-sm">
+                    class="w-2/3 sm:w-1/2 lg:w-full  max-w-sm" data-aos="flip-down">
             </div>
         </div>
 
@@ -102,15 +105,16 @@
     {{-- Container deks akikah --}}
     <div class="relative">
 
-        {{-- Hiasan kotak kotak di bawah tulisan --}}
-        <div class="absolute inset-0 -z-0">
-            <div class="w-64 h-64 bg-blue-100 rounded-xl absolute top-10 left-10"></div>
-        </div>
+        {{-- Hiasan Belakang deks --}}
+        <div class="w-30 h-30 bg-gray-600 rounded-xl absolute bottom-10 right-10 "></div>
+        <div class="w-40 h-40 bg-gray-600 rounded-full absolute top-20"></div>
+        <div class="w-40 h-40 bg-gray-600 rounded-xl absolute top-50 xl:right-80 right-30"></div>
+        <div class="w-40 h-40 bg-gray-600 rounded-xl absolute bottom-35 left-40"></div>
 
         <div class="bg-gray-500 mt-50 flex border-b-4 pb-15">
-            <div class="xl:px-40 px-10 pt-20 w-400">
-                <h1 class="font-bold xl:text-7xl md:text-6xl text-4xl text-white m-4">Aqiqah Dziqqir</h1>
-                <p class="xl:text-2xl">Akikah adalah sunnah yang dianjurkan untuk dilakukan oleh orang tua ketika bayi
+            <div class="xl:px-40 px-10 pt-20 backdrop-blur xl:bg-transparent">
+                <h1 class="font-bold xl:text-7xl md:text-6xl text-4xl text-white m-4" >Aqiqah Dziqqir</h1>
+                <p class="xl:text-2xl" >Akikah adalah sunnah yang dianjurkan untuk dilakukan oleh orang tua ketika bayi
                     lahir. Proses akikah
                     meliputi
                     penyembelihan hewan (biasanya Kambing atau domba) sebagai tanda syukur atas kelahiran anak,
@@ -119,8 +123,9 @@
                     mendoakan anak agar tumbuh sehat dan berkah. kami menyediakan layanan akikah yang mudah,aman dan
                     sesuai
                     dengan ketentuan syariat islam </p>
-                <a href="https://www.detik.com/hikmah/khazanah/d-7551232/aqiqah-pengertian-dalil-dan-syaratnya">
+                <a href="https://www.detik.com/hikmah/khazanah/d-7551232/aqiqah-pengertian-dalil-dan-syaratnya" >
                     <button
+                    
                         class="inline-block cursor-pointer items-center justify-center rounded-xl border-[1.58px] mt-5   border-zinc-600 bg-zinc-950 px-5 py-3 font-medium text-slate-200 shadow-md transition-all duration-300 hover:[transform:translateY(-.335rem)] hover:shadow-xl">
                         Lebih lanjut
                         <span class="text-slate-300/85">--Aqiqah</span>
@@ -133,15 +138,15 @@
 
         <div class="bg-gray-500 flex justify-end pb-15 ">
             {{-- Container deks akikah --}}
-            <div class="xl:px-40 px-10 pt-20  text-right xl:backdrop-blur xl:bg-transparent">
-                <h1 class="font-bold xl:text-7xl md:text-6xl text-4xl text-white m-4">Qurban Dziqqir</h1>
-                <p class="xl:text-2xl">
+            <div class="xl:px-40 px-10 pt-20  text-right backdrop-blur bg-transparent">
+                <h1 class="font-bold xl:text-7xl md:text-6xl text-4xl text-white m-4" >Qurban Dziqqir</h1>
+                <p class="xl:text-2xl" >
                     Qurban (atau kurban dalam Bahasa Indonesia) adalah ibadah menyembelih hewan ternak tertentu pada
                     hari raya Idul Adha sebagai bentuk mendekatkan diri kepada Allah SWT. Ibadah ini sangat dianjurkan
                     bagi umat Islam sebagai bentuk syukur atas nikmat yang diberikan Allah SWT
                 </p>
                 <a href="https://www.detik.com/hikmah/khazanah/d-7551232/aqiqah-pengertian-dalil-dan-syaratnya">
-                    <button
+                    <button 
                         class="inline-block cursor-pointer items-center justify-center rounded-xl border-[1.58px] mt-5 border-zinc-600 bg-zinc-950 px-5 py-3 font-medium text-slate-200 shadow-md transition-all duration-300 hover:[transform:translateY(-.335rem)] hover:shadow-xl">
                         Lebih lanjut
                         <span class="text-slate-300/85">--Aqiqah</span>
@@ -153,25 +158,24 @@
 
 
     {{-- Dokumentasi atau Galeri --}}
-    <div class="relative h-340">
+    <div class="relative xl:h-340" id="galeri">
         {{-- Judul Galeri --}}
         <h1
-            class="text-center font-bold xl:text-5xl md:text-4xl text-3xl hover:text-gray-500 xl:backdrop-blur xl:bg-transparent bg-gray-400 rounded-2xl m-10 pt-10">
+            class="text-center font-bold xl:text-5xl md:text-4xl text-3xl hover:text-gray-500 backdrop-blur bg-transparent  rounded-2xl m-1 pt-10">
             dokumentasi 📸</h1>
         {{-- hiasan kotak d belakang --}}
         <div class="absolute inset-0 -z-10">
             <div class="w-64 h-64 bg-gray-600 rounded-xl absolute top-10 left-10"></div>
-            <div class="w-40 h-40 bg-gray-500 rounded-xl absolute bottom-10 right-10"></div>
+            <div class="w-40 h-40 bg-gray-500 rounded-xl absolute bottom-20 right-10"></div>
             <div class="w-40 h-40 bg-gray-500 rounded-xl absolute  right-10"></div>
             <div class="w-70 h-70 bg-gray-500 rounded-xl absolute bottom-90 right-140"></div>
-            <div class="w-70 h-70 bg-gray-500 rounded-xl absolute bottom-20 left-130"></div>
-            <div class="w-64 h-64 bg-gray-600 rounded-xl absolute top-50 left-50"></div>
+            <div class="w-70 h-70 bg-gray-500 rounded-xl absolute bottom-20 left-10"></div>
+            <div class="w-60 h-60 bg-gray-600 rounded-xl absolute top-50 left-40"></div>
             {{-- <div class="w-40 h-80 bg-gray-800 rounded-r-full absolute top-155"></div>
             <div class="w-40 h-80 bg-gray-500 rounded-l-full absolute xl:top-250 sm:top-300 top-330 right-0"></div> --}}
         </div>
 
-
-        <div class="flex justify-center items-center min-h-screen">
+        <div class="flex justify-center items-center m-5">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-400">
                 <div class="grid gap-4">
                     <div>

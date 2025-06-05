@@ -2,28 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Penjual;
 use Illuminate\Http\Request;
 
-class hewanController extends Controller
+class penjualController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view("produk");
+        $penjual = Penjual::all();
+        dd($penjual);
+        return view("penjual.index", compact("penjual"));
     }
 
-        public function layanan()
-    {
-        return view("layanan");
-    }
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        return view("hewan.create");
+        //
     }
 
     /**
