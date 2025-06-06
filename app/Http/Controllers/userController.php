@@ -33,20 +33,32 @@ class userController extends Controller
         $penjual = Penjual::where("username", $request->username)->where("password",$request->password)->first();
 
         if ($admin) {
+
             session(['username' => $admin->username]);
             // Alert::success('Hallo Admin', 'Kamu berasil login sebagai admin');
             $identitasAdmin = Admin::where('username', $request->username)->where('password', $request->password)->first();
-            return redirect('/admin', compact('identitasAdmin'));
+            $admin = $identitasAdmin;
+
+            return redirect()->route('beranda.admin', ['id' => $admin->id]);
 
         } else if ($penjual){
+
             session(['username' => $penjual->username]);
             $identitasPenjual = Penjual::where('username', $request->username)->where('password', $request->password)->first();
             $penjual = $identitasPenjual;
             // Alert::success('Hallo Admin', 'Kamu berasil login sebagai admin');
-            return redirect()->route('beranda.penjual');
+            return redirect()->route('beranda.penjual' , ['id' => $penjual->id]);
             // return view('penjual.index', compact('penjual'));
         }
 
+    }
+
+    public function layanan(){
+        return view("layanan");
+    }
+
+    public function hewan(){
+        return view("produk");
     }
     /**
      * Show the form for creating a new resource.

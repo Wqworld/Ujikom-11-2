@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Hewan;
+use App\Models\Penjual;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use illuminate\Support\Str;
 
 class hewanController extends Controller
 {
@@ -11,18 +15,15 @@ class hewanController extends Controller
      */
     public function index()
     {
-        return view("produk");
+
     }
 
-        public function layanan()
-    {
-        return view("layanan");
-    }
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
+        // $penjual = Penjual::findOrFail($id);
         return view("hewan.create");
     }
 
@@ -31,7 +32,44 @@ class hewanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validasiData = $request->validate([
+            "jenis" => "required",
+            "status" => "required",
+            "deks_hewan" => "required",
+            "gambar" => "required|image|mimes:jpeg,png,jpg|max:2048",
+            "umur_hewan" => "required",
+            "kesehatan" => "required",
+            "harga_hewan" => "required",
+            "berat_hewan"=> "required",
+            "hargadp_hewan"=> "required",
+            "id_penjual" => "required"
+        ]
+        ,[
+            "jenis.required" => "Harus di isi terlebih dahulu",
+            "status.required" => "Harus di isi terlebih dahulu",
+            "gambar.required" => "Harus menambahkan gambar",
+            "umur_hewan.required" => "Harus di isi terlebih dahulu",
+            "kesehatan.required" => "Harus di isi terlebih dahulu",
+            "harga_hewan.required" => "Harus di isi terlebih dahulu",
+            "berat_hewan.required"=> "Harus di isi terlebih dahulu",
+            "hargadp_hewan.required"=> "Harus di isi terlebih dahulu",
+        ]
+    );   
+
+    if ($request->hasFile('gambar')) {
+        $foto = $request->file('gambar');
+        $fileName = Str::uuid() . '.' . $foto->getClientOriginalExtension();
+        $foto->storeAs('foto_Hewan', $fileName, 'public');
+
+        $validasiData['gambar'] = $fileName;
+    }
+
+    // Simpan data ke database
+    Hewan::create($validasiData);
+
+
+    return redirect()->route("beranda.penjual");
+    
     }
 
     /**
