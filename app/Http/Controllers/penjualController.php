@@ -12,9 +12,8 @@ class penjualController extends Controller
      */
     public function index()
     {
-        $penjual = Penjual::all();
-        dd($penjual);
-        return view("penjual.index", compact("penjual"));
+        // $penjual = Penjual::findOrFail($id);
+        return view("penjual.index");
     }
 
     /**

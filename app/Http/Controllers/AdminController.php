@@ -11,9 +11,10 @@ class AdminController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($id)
     {
-        return view("admin.index");
+        $admin = Admin::findOrFail($id);
+        return view("admin.index", compact("admin"));
     }
 
     /**

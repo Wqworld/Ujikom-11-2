@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->enum('jenis',['Kambing','Sapi','Domba','Hewan'])->default('Hewan');
             $table->enum('status',['Ready','Tidak Ready']);
-            $table->string('deks_Hewan');
-            $table->string('gambar');
+            $table->text('deks_Hewan');
+            $table->text('gambar');
             $table->integer('umur_hewan');
             $table->string('kesehatan');
             $table->bigInteger('harga_hewan');
