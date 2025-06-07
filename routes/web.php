@@ -10,11 +10,14 @@ Route::get('/',[userController::class,'index'])->name('beranda');
 Route::get('/layanan',[userController::class,'layanan'])->name('beranda.layanan');
 Route::get('/produk',[userController::class,'hewan'])->name('beranda.produk');
 Route::get('/login',[userController::class,'loginform'])->name('login');
+Route::get('/register',[userController::class,'registerform'])->name('register');
 
 Route::post('/login',[userController::class, 'login'])->name('login_submit');
+Route::post('/register',[userController::class, 'register'])->name('register_submit');
+Route::get('/logout',[userController::class,'logout'])->name('logout');
 
 
-Route::get('/admin/{id}', [AdminController::class,'index'])->name('beranda.admin');
+Route::get('/admin', [AdminController::class,'index'])->name('beranda.admin');
 // coba kamu tambahkan id si penjual yang baru di tambahkan
 Route::get('/penjual',[penjualController::class,'index'])->name('beranda.penjual');
 

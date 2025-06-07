@@ -13,6 +13,6 @@ class HewanSeeder extends Seeder
      */
     public function run(): void
     {
-        Hewan::factory()->count(30)->create();
+        Hewan::factory()->count(10)->create();
     }
 }

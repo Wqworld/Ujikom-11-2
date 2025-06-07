@@ -11,10 +11,13 @@ class AdminController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index($id)
+    public function index()
     {
-        $admin = Admin::findOrFail($id);
-        return view("admin.index", compact("admin"));
+        if (session("role" ) != "admin") {
+            return redirect()->route("beranda")->with("erorr","kamu bukan admin");
+        }
+
+        return view("admin.index", ['admin' => session('admin')]);
     }
 
     /**

@@ -16,7 +16,6 @@ return new class extends Migration
             $table->id();
             $table->string('nama_penjual');
             $table->integer('umur_penjual');
-            $table->date('tanggal_masuk_hewan');
             $table->string('nomor_hp');
             $table->string('alamat_penjual');
             $table->string('username');

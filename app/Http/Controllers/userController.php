@@ -22,35 +22,54 @@ class userController extends Controller
         return view("login");
     }
 
+    public function registerform(){
+        return view("register");
+    }
+
     public function login(Request $request){
-        
-        $validateData = $request->validate([
-            "username" => "required",
-            "password"=> "required",
-        ]);
 
         $admin = Admin::where("username", $request->username)->where("password", $request->password)->first();
         $penjual = Penjual::where("username", $request->username)->where("password",$request->password)->first();
 
         if ($admin) {
 
-            session(['username' => $admin->username]);
+            session(['role' => 'admin','admin' => $admin]);
             // Alert::success('Hallo Admin', 'Kamu berasil login sebagai admin');
-            $identitasAdmin = Admin::where('username', $request->username)->where('password', $request->password)->first();
-            $admin = $identitasAdmin;
 
-            return redirect()->route('beranda.admin', ['id' => $admin->id]);
+            return redirect()->route('beranda.admin');
 
         } else if ($penjual){
-
-            session(['username' => $penjual->username]);
-            $identitasPenjual = Penjual::where('username', $request->username)->where('password', $request->password)->first();
-            $penjual = $identitasPenjual;
+            session(['penjual' => $penjual, 'role' => 'penjual']);
             // Alert::success('Hallo Admin', 'Kamu berasil login sebagai admin');
-            return redirect()->route('beranda.penjual' , ['id' => $penjual->id]);
+            return redirect()->route('beranda.penjual' );
             // return view('penjual.index', compact('penjual'));
         }
+        else {
+            return redirect()->route('login');   
+        }
 
+    }
+
+    public function register(Request $request){
+        
+        $validasiData = $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+            'repeat_password' => 'required',
+            'nama_penjual' => 'required',
+            'umur_penjual' => 'required',
+            'nomor_hp' => 'required',
+            'alamat_penjual' => 'required',
+        ]);
+
+        Penjual::create($validasiData);
+
+        return redirect()->route('login');
+    }
+
+    public function logout(){
+        session()->flush();
+        return redirect()->route('beranda');
     }
 
     public function layanan(){
@@ -58,7 +77,8 @@ class userController extends Controller
     }
 
     public function hewan(){
-        return view("produk");
+        $hewan = Hewan::all();
+        return view("produk",compact("hewan"));
     }
     /**
      * Show the form for creating a new resource.

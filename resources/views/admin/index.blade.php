@@ -2,5 +2,9 @@
     <x-nav-bar></x-nav-bar>
     Halaman admin
 
-    {{ $admin->nama_admin }}
+    <h1>
+
+        {{ session('admin')->nama_admin }}
+    </h1>
+
 </x-layout>
