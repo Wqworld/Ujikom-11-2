@@ -19,9 +19,9 @@ return new class extends Migration
             $table->text('gambar');
             $table->integer('umur_hewan');
             $table->string('kesehatan');
-            $table->bigInteger('harga_hewan');
-            $table->bigInteger('berat_hewan');
-            $table->bigInteger('hargadp_hewan');
+            $table->decimal('harga_hewan',15,2);
+            $table->float('berat_hewan');
+            $table->decimal('hargadp_hewan',15,2);
             $table->foreignId('id_penjual')->constrained('penjual')->onDelete('cascade');
             $table->timestamps();
         });

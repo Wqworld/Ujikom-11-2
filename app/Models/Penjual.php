@@ -12,7 +12,7 @@ class Penjual extends Model
     use HasFactory;
 
     protected $table = 'penjual';
-    protected $fillable = ['nama_penjual','umur_penjual','tanggal_masuk_hewan','nomor_hp','alamat_penjual','username','password'];
+    protected $fillable = ['nama_penjual','umur_penjual','nomor_hp','alamat_penjual','username','password'];
 
     public function hewan():HasMany{
         return $this->hasMany(Hewan::class);

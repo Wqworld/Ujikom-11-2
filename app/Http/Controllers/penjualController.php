@@ -13,7 +13,11 @@ class penjualController extends Controller
     public function index()
     {
         // $penjual = Penjual::findOrFail($id);
-        return view("penjual.index");
+        if (session("role") != "penjual") {
+           return redirect()->back()->with("error","Kamu Bukan penjual");
+        }
+        
+        return view("penjual.index" ,["penjual" => session("penjual")]);
     }
 
     /**
