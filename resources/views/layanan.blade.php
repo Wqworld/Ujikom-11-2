@@ -11,7 +11,7 @@
       <div class="w-32 h-64 md:w-40 md:h-80 bg-gray-500 rounded-l-full absolute top-60 right-0"></div>
     </div>
 
-    <div class="flex items-center justify-center h-full text-white text-center px-6">
+    <div class="flex items-center justify-center h-full font-bold text-center px-6">
       <div>
         <h1 class="text-3xl md:text-4xl font-bold">Layanan Akikah & Qurban Dziqqir</h1>
         <p class="mt-2 text-lg md:text-xl">Mudah, sesuai syariah, dan terpercaya.</p>

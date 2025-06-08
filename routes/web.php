@@ -19,7 +19,9 @@ Route::get('/logout',[userController::class,'logout'])->name('logout');
 
 Route::get('/admin', [AdminController::class,'index'])->name('beranda.admin');
 // coba kamu tambahkan id si penjual yang baru di tambahkan
+
+
 Route::get('/penjual',[penjualController::class,'index'])->name('beranda.penjual');
 
-Route::get('/hewan',[hewanController::class,'create'])->name('create.hewan');
-Route::post ('/hewan',[hewanController::class,'store'])->name('store.hewan');
+Route::get('/hewan/create',[hewanController::class,'create'])->name('create.hewan');
+Route::post ('/hewan/create',[hewanController::class,'store'])->name('store.hewan');

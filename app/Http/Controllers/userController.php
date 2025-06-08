@@ -14,6 +14,7 @@ class userController extends Controller
      */
     public function index()
     {
+        session()->flush();
         $hewan = Hewan::all();
         return view("index", compact("hewan"));
     }

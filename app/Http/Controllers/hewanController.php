@@ -23,8 +23,12 @@ class hewanController extends Controller
      */
     public function create()
     {
+        if (session('penjual') || session('admin')) {
+            return view("hewan.create");
+        } else {
+            return redirect()->route('beranda');
+        }
         // $penjual = Penjual::findOrFail($id);
-        return view("hewan.create");
     }
 
     /**

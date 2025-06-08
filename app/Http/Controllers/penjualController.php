@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Hewan;
 use App\Models\Penjual;
 use Illuminate\Http\Request;
 
@@ -16,8 +17,12 @@ class penjualController extends Controller
         if (session("role") != "penjual") {
            return redirect()->back()->with("error","Kamu Bukan penjual");
         }
-        
-        return view("penjual.index" ,["penjual" => session("penjual")]);
+
+        $penjual = session("penjual");
+        $jumlahHewan = Hewan::where("id_penjual", $penjual->id)->count();
+        $jumlahHewanReady = Hewan::where("id_penjual", $penjual->id)->where("status", "Ready")->count();
+        $jumlahHewanTidakReady = Hewan::where("id_penjual", $penjual->id)->where("status", "Tidak Ready")->count();
+        return view("penjual.index" , compact("penjual", "jumlahHewan", "jumlahHewanReady","jumlahHewanTidakReady"));
     }
 
     /**
