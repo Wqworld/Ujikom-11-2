@@ -102,7 +102,8 @@ class userController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $hewan = Hewan::find($id);
+        return view("show",compact("hewan"));
     }
 
     /**
