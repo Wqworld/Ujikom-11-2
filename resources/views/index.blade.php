@@ -180,7 +180,7 @@
                 <div class="grid gap-4">
                     <div>
                         <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
-                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
+                            src="{{ asset('assets/dokumentasi/ayahMunding2.JPG') }}" alt="">
                     </div>
                     <div>
                         <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
@@ -222,7 +222,7 @@
                 <div class="grid gap-4">
                     <div>
                         <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
-                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
+                             src="{{ asset('assets/dokumentasi/ayahMunding.JPG') }}" alt="">
                     </div>
                     <div>
                         <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"

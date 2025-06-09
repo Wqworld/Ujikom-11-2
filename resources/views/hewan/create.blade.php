@@ -1,4 +1,17 @@
 <x-layout>
+
+        <div class="relative">
+        {{-- hiasan kotak di belakang --}}
+        <div class="absolute inset-0 -z-10">
+            <div class="w-64 h-64 bg-gray-300 rounded-xl absolute top-10 left-10 hidden sm:block"></div>
+            <div class="w-40 h-40 bg-gray-300 rounded-xl absolute bottom-10 right-10 hidden sm:block"></div>
+            <div class="w-80 h-80 bg-gray-800 rounded-full absolute top-125 hidden sm:block"></div>
+            <div class="w-40 h-80 bg-gray-500 rounded-l-full absolute top-130 right-0 hidden sm:block"></div>
+            <div class="w-80 h-80 bg-gray-500 rounded-full absolute top-13 right-50 hidden sm:block"></div>
+            <div class="w-80 h-80 bg-gray-400 rounded-2xl absolute top-100 left-50 hidden sm:block"></div>
+        </div>
+    </div>
+    
     <div class="max-w-2xl mx-auto mt-10 bg-white dark:bg-gray-800 shadow-lg rounded-xl p-8">
         <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-6 text-center">Form Tambah Hewan</h2>
 
