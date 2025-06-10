@@ -27,8 +27,16 @@ Route::get('/admin', [AdminController::class,'index'])->name('beranda.admin');
 
 
 Route::get('/penjual',[penjualController::class,'index'])->name('beranda.penjual');
+Route::get('/penjual/profile',[penjualController::class,'profile'])->name('profile.penjual');
+Route::get('/penjual/profile/{id}/edit',[penjualController::class,'profileEdit'])->name('profile.edit');
+Route::put('/penjual/profile/{id}/edit',[penjualController::class,'updateProfile'])->name('profile.update');
+
+
 Route::get('/penjual/hewan',[penjualController::class, 'hewan'])->name('hewan.penjual');
 Route::get('/penjual/hewan/{id}',[penjualController::class, 'showHewan'])->name('hewan.detail');
+Route::get('/penjual/hewan/{id}/edit',[penjualController::class,'edit'])->name('hewan.edit');
+Route::put('/penjual/hewan/{id}/edit',[penjualController::class,'update'])->name('hewan.update');
+Route::delete('/penjual/hewan/{id}',[penjualController::class, 'destroy'])->name('hewan.delete');
 
 Route::get('/hewan/create',[hewanController::class,'create'])->name('create.hewan');
 Route::post ('/hewan/create',[hewanController::class,'store'])->name('store.hewan');

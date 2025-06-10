@@ -21,6 +21,7 @@
 </head>
 
 <body class="bg-gray-200 font-poppins">
+    @include('sweetalert::alert')
     {{ $slot }}
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

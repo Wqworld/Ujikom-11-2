@@ -99,7 +99,8 @@
             <div>
                 <label for="hargadp_hewan" class="block text-sm font-medium text-gray-700 dark:text-white">Harga
                     DP</label>
-                <input type="number" id="hargadp_hewan" name="hargadp_hewan" value="{{ old('hargadp_hewan') }}"
+                <input type="text" id="hargadp_hewan" name="hargadp_hewan" x-data x-mask:dynamic="(val) => val.replace(/\D/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, '.')"
+                value="{{ old('hargadp_hewan') }}"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:text-white" />
                 @error('hargadp_hewan') <p class="text-red-500 text-sm mt-1">{{ $message }}</p> @enderror
             </div>
