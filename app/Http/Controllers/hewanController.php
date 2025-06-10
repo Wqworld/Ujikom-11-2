@@ -7,6 +7,7 @@ use App\Models\Penjual;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use illuminate\Support\Str;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class hewanController extends Controller
 {
@@ -75,7 +76,7 @@ public function store(Request $request)
 
     // Simpan data ke database
     Hewan::create($validasiData);
-
+    Alert::success('Berhasil', 'Hewan Berasil di tambahka ');
     return redirect()->route("beranda.penjual");
 }
 

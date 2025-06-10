@@ -6,6 +6,7 @@ use App\Models\Admin;
 use App\Models\Hewan;
 use App\Models\Penjual;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class userController extends Controller
 {
@@ -14,7 +15,8 @@ class userController extends Controller
      */
     public function index()
     {
-        session()->flush();
+        Alert::success('Logout Berasil', 'Kamu Berasil Logout');
+        // session()->flush();
         $hewan = Hewan::all();
         return view("index", compact("hewan"));
     }
@@ -35,13 +37,13 @@ class userController extends Controller
         if ($admin) {
 
             session(['role' => 'admin','admin' => $admin]);
-            // Alert::success('Hallo Admin', 'Kamu berasil login sebagai admin');
-
+            Alert::success('Hallo Admin', 'Kamu berasil login sebagai admin');
             return redirect()->route('beranda.admin');
 
         } else if ($penjual){
             session(['penjual' => $penjual, 'role' => 'penjual']);
             // Alert::success('Hallo Admin', 'Kamu berasil login sebagai admin');
+            Alert::success('Hallo ' . session('penjual')->nama_penjual,'Kamu Berasil login sebagai admin');
             return redirect()->route('beranda.penjual' );
             // return view('penjual.index', compact('penjual'));
         }
@@ -64,12 +66,13 @@ class userController extends Controller
         ]);
 
         Penjual::create($validasiData);
-
+        Alert::success('Registrasi Berasil', 'Akun berasil di tambahkan');
         return redirect()->route('login');
     }
 
     public function logout(){
         session()->flush();
+        Alert::success('Logout Berhasil', 'Kamu Berasil Logout');
         return redirect()->route('beranda');
     }
 

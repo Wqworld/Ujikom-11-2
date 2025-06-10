@@ -94,59 +94,63 @@
             Hewan Terbaru Di tambahkan
         </h1>
 
-        <!-- Dari Uiverse.io by Yaya12085 Hewan terbaru -->
-        <div class="grid xl:grid-cols-4 md:grid-cols-2 justify-center items-center gap-2 max-[500px]:grid-cols-1 px-3">
+       <!-- Dari Uiverse.io by Yaya12085 Hewan terbaru -->
+        <div class="grid xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-6 px-4 py-8">
             @foreach ($hewanTerbaru as $item)
-
-                <div
-                    class="relative flex w-80 h-120 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mx-5 mt-20">
-                    <div>
+                <div class="flex flex-col rounded-xl bg-white text-gray-700 shadow-md overflow-hidden w-full max-w-sm mx-auto">
+                    <div class="relative w-full aspect-[4/3]">
+                        <img src="{{ asset('storage/foto_Hewan/' . $item->gambar) }}"
+                            alt="Gambar Hewan"
+                            class="object-cover w-full h-full rounded-t-xl">
                     </div>
-
-                    <img src="{{ asset('storage/foto_Hewan/' . $item->gambar) }}" alt="Gambar Hewan"
-                        class="relative mx-4 -mt-6 h-auto overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
-                    <div class="p-6">
-                        <h5
-                            class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-                            Tailwind card
+                    <div class="p-4">
+                        <h5 class="mb-2 text-xl font-semibold text-blue-gray-900">
+                            {{ $item->jenis }}
+                            @if ($item->status == 'Ready')
+                                <span class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full ml-2">
+                                    <span class="w-2 h-2 mr-1 bg-green-500 rounded-full"></span> Tersedia
+                                </span>
+                            @else
+                                <span class="inline-flex items-center bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full ml-2">
+                                    <span class="w-2 h-2 mr-1 bg-red-500 rounded-full"></span> Tidak Tersedia
+                                </span>
+                            @endif
                         </h5>
-                        <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula.
-                        </p>
-                    </div>
-                    <div class="p-6 pt-0">
-                        <button data-ripple-light="true" type="button"
-                            class="select-none rounded-lg bg-gray-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-gray-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                            Read More
-                        </button>
+
+                        <p class="text-base text-gray-600 mb-1">{{ $item->deks_Hewan }}</p>
+                        <p class="text-base text-gray-800 font-medium mb-1">Harga: Rp {{ number_format($item->harga_hewan, 2, ',', '.') }}</p>
+                        <p class="text-base text-gray-800 mb-1">Umur: {{ $item->umur_hewan }} Tahun</p>
+                        <p class="text-base text-gray-800">Berat: {{ $item->berat_hewan }} Kg</p>
                     </div>
                 </div>
             @endforeach
         </div>
 
+
         <!-- From Uiverse.io by Mubashir222 -->
-            <a href="{{ route('hewan.penjual') }}" class="relative inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter mx-8 my-10 text-white bg-gray-800 rounded-md group">
-                <span
-                    class="absolute w-0 h-0 transition-all duration-500 ease-out bg-blue-600 rounded-full group-hover:w-56 group-hover:h-56"></span>
-                <span class="absolute bottom-0 left-0 h-full -ml-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-auto h-full opacity-100 object-stretch"
-                        viewBox="0 0 487 487">
-                        <path fill-opacity=".1" fill-rule="nonzero" fill="#FFF"
-                            d="M0 .3c67 2.1 134.1 4.3 186.3 37 52.2 32.7 89.6 95.8 112.8 150.6 23.2 54.8 32.3 101.4 61.2 149.9 28.9 48.4 77.7 98.8 126.4 149.2H0V.3z">
-                        </path>
-                    </svg>
-                </span>
-                <span class="absolute top-0 right-0 w-12 h-full -mr-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="object-cover w-full h-full" viewBox="0 0 487 487">
-                        <path fill-opacity=".1" fill-rule="nonzero" fill="#FFF"
-                            d="M487 486.7c-66.1-3.6-132.3-7.3-186.3-37s-95.9-85.3-126.2-137.2c-30.4-51.8-49.3-99.9-76.5-151.4C70.9 109.6 35.6 54.8.3 0H487v486.7z">
-                        </path>
-                    </svg>
-                </span>
-                <span
-                    class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-200"></span>
-                <span class="relative text-base font-semibold">Lebih Lanjut</span>
-            </a>
+        <a href="{{ route('hewan.penjual') }}"
+            class="relative inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter mx-8 my-10 text-white bg-gray-800 rounded-md group">
+            <span
+                class="absolute w-0 h-0 transition-all duration-500 ease-out bg-blue-600 rounded-full group-hover:w-56 group-hover:h-56"></span>
+            <span class="absolute bottom-0 left-0 h-full -ml-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-auto h-full opacity-100 object-stretch"
+                    viewBox="0 0 487 487">
+                    <path fill-opacity=".1" fill-rule="nonzero" fill="#FFF"
+                        d="M0 .3c67 2.1 134.1 4.3 186.3 37 52.2 32.7 89.6 95.8 112.8 150.6 23.2 54.8 32.3 101.4 61.2 149.9 28.9 48.4 77.7 98.8 126.4 149.2H0V.3z">
+                    </path>
+                </svg>
+            </span>
+            <span class="absolute top-0 right-0 w-12 h-full -mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="object-cover w-full h-full" viewBox="0 0 487 487">
+                    <path fill-opacity=".1" fill-rule="nonzero" fill="#FFF"
+                        d="M487 486.7c-66.1-3.6-132.3-7.3-186.3-37s-95.9-85.3-126.2-137.2c-30.4-51.8-49.3-99.9-76.5-151.4C70.9 109.6 35.6 54.8.3 0H487v486.7z">
+                    </path>
+                </svg>
+            </span>
+            <span
+                class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-200"></span>
+            <span class="relative text-base font-semibold">Lebih Lanjut Hewan anda</span>
+        </a>
 
     </x-side-bar>
 </x-layout>
