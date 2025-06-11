@@ -15,8 +15,8 @@ class userController extends Controller
      */
     public function index()
     {
-        Alert::success('Logout Berasil', 'Kamu Berasil Logout');
-        // session()->flush();
+        session()->flush();
+        toast('Logout Berasil ','success');
         $hewan = Hewan::all();
         return view("index", compact("hewan"));
     }
@@ -30,7 +30,6 @@ class userController extends Controller
     }
 
     public function login(Request $request){
-
         $admin = Admin::where("username", $request->username)->where("password", $request->password)->first();
         $penjual = Penjual::where("username", $request->username)->where("password",$request->password)->first();
 
@@ -43,7 +42,8 @@ class userController extends Controller
         } else if ($penjual){
             session(['penjual' => $penjual, 'role' => 'penjual']);
             // Alert::success('Hallo Admin', 'Kamu berasil login sebagai admin');
-            Alert::success('Hallo ' . session('penjual')->nama_penjual,'Kamu Berasil login sebagai admin');
+            toast('Hallo ' . session('penjual')->nama_penjual,'success');
+            // Alert::success('Hallo ' . session('penjual')->nama_penjual,'Kamu Berasil login sebagai admin');
             return redirect()->route('beranda.penjual' );
             // return view('penjual.index', compact('penjual'));
         }

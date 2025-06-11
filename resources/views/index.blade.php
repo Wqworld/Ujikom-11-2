@@ -52,7 +52,7 @@
             <a href="#" class="w-full sm:w-1/2 lg:w-1/3 block p-6 bg-white border border-gray-200 rounded-lg shadow-sm
               hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700
               opacity-0 animate-fade-up card-delay-1" data-aos="fade-down" data-aos-easing="linear"
-                data-aos-duration="840">
+                data-aos-duration="800">
 
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Layanan Akikah:</h5>
                 <p class="text-gray-700 text-2 dark:text-gray-400">
@@ -64,7 +64,7 @@
             <a href="#" class="w-full sm:w-1/2 lg:w-1/3 block p-6 bg-white border border-gray-200 rounded-lg shadow-sm
               hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700
               opacity-0 animate-fade-up card-delay-2" data-aos="fade-down" data-aos-easing="linear"
-                data-aos-duration="840">
+                data-aos-duration="900">
 
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Layanan Qurban:</h5>
                 <p class="font-normal text-gray-700 dark:text-gray-400">
@@ -80,7 +80,7 @@
             <a href="#" class="w-full sm:w-1/2 lg:w-1/3 block p-6 bg-white border border-gray-200 rounded-lg shadow-sm
               hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700
               opacity-0 animate-fade-up card-delay-3" data-aos="fade-down" data-aos-easing="linear"
-                data-aos-duration="840">
+                data-aos-duration="1000">
 
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Catering syukuran
                     akikah</h5>
@@ -112,7 +112,7 @@
         <div class="w-40 h-40 bg-gray-600 rounded-xl absolute bottom-35 left-40"></div>
 
         <div class="bg-gray-500 mt-50 flex border-b-4 pb-15">
-            <div class="xl:px-40 px-10 pt-20 backdrop-blur xl:bg-transparent">
+            <div class="xl:px-40 px-10 pt-20 backdrop-blur xl:bg-transparent" data-aos="flip-left">
                 <h1 class="font-bold xl:text-7xl md:text-6xl text-4xl text-white m-4" >Aqiqah Dziqqir</h1>
                 <p class="xl:text-2xl" >Akikah adalah sunnah yang dianjurkan untuk dilakukan oleh orang tua ketika bayi
                     lahir. Proses akikah
@@ -138,7 +138,7 @@
 
         <div class="bg-gray-500 flex justify-end pb-15 ">
             {{-- Container deks akikah --}}
-            <div class="xl:px-40 px-10 pt-20  text-right backdrop-blur bg-transparent">
+            <div class="xl:px-40 px-10 pt-20  text-right backdrop-blur bg-transparent" data-aos="flip-right">
                 <h1 class="font-bold xl:text-7xl md:text-6xl text-4xl text-white m-4" >Qurban Dziqqir</h1>
                 <p class="xl:text-2xl" >
                     Qurban (atau kurban dalam Bahasa Indonesia) adalah ibadah menyembelih hewan ternak tertentu pada
@@ -161,7 +161,7 @@
     <div class="relative xl:h-340" id="galeri">
         {{-- Judul Galeri --}}
         <h1
-            class="text-center font-bold xl:text-5xl md:text-4xl text-3xl hover:text-gray-500 backdrop-blur bg-transparent  rounded-2xl m-1 pt-10">
+            class="text-center font-bold xl:text-5xl md:text-4xl text-3xl backdrop-blur bg-transparent  rounded-2xl m-1 pt-10">
             dokumentasi 📸</h1>
         {{-- hiasan kotak d belakang --}}
         <div class="absolute inset-0 -z-10">
@@ -184,39 +184,39 @@
                     </div>
                     <div>
                         <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
-                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+                            src="{{ asset('assets/dokumentasi/ayahPeace.jpg') }}" alt="">
                     </div>
                     <div>
                         <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
-                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
-                    </div>
-                </div>
-                <div class="grid gap-4">
-                    <div>
-                        <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
-                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
-                    </div>
-                    <div>
-                        <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
-                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
-                    </div>
-                    <div>
-                        <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
-                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
+                            src="{{ asset('assets/dokumentasi/domba2.jpg') }}" alt="">
                     </div>
                 </div>
                 <div class="grid gap-4">
                     <div>
                         <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
-                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
+                            src="{{ asset('assets/dokumentasi/domba1') }}" alt="">
                     </div>
                     <div>
                         <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
-                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
+                            src="{{ asset('assets/dokumentasi/bersihinBedog.JPG') }}" alt="">
                     </div>
                     <div>
                         <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
-                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
+                            src="{{ asset('assets/dokumentasi/bersihanBedog.JPG') }}" alt="">
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
+                            src="{{ asset('assets/dokumentasi/testimoni.jpg') }}" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
+                            src="{{ asset('assets/dokumentasi/mencitDomba.jpg') }}" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
+                             src="{{ asset('assets/dokumentasi/31925062_1896828663674114_5124795504898605056_n.jpg') }}" alt="">
                     </div>
                 </div>
                 <div class="grid gap-4">
@@ -226,11 +226,11 @@
                     </div>
                     <div>
                         <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
-                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
+                           src="{{ asset('assets/dokumentasi/ayahpeacelagi.jpg') }}" alt="">
                     </div>
                     <div>
                         <img class="h-auto max-w-full rounded-lg transform transition-transform duration-300 hover:scale-105"
-                            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
+                            src="{{ asset('assets/dokumentasi/kambingguling.jpg') }}" alt="">
                     </div>
                 </div>
             </div>
