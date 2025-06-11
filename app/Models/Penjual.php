@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Penjual extends Model
 {
-    /** @use HasFactory<\Database\Factories\PenjualFactory> */
+      /** @use HasFactory<\Database\Factories\PenjualFactory> */
     use HasFactory;
 
     protected $table = 'penjual';
@@ -17,6 +17,5 @@ class Penjual extends Model
     public function hewan():HasMany{
         return $this->hasMany(Hewan::class);
     }
-
     
 }

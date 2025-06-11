@@ -23,6 +23,8 @@ Route::get('/logout',[userController::class,'logout'])->name('logout');
 
 
 Route::get('/admin', [AdminController::class,'index'])->name('beranda.admin');
+Route::get('/admin/hewan',[AdminController::class, 'hewan'])->name('admin.hewan');
+Route::get('/admin/penjual',[AdminController::class, 'penjual'])->name('admin.penjual');
 // coba kamu tambahkan id si penjual yang baru di tambahkan
 
 

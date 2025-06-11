@@ -73,6 +73,9 @@ class penjualController extends Controller
      */
     public function showHewan(string $id)
     {
+        if (!session("penjual") || session("admin")) {
+            return redirect()->back()->with("error", "Kamu tidak Memiliki akses");
+        }
         $hewan = Hewan::findOrFail($id);
         $title = 'Delete Hewan!';
         $text = "Apakah Kamu yakin ingin hapus ?";
@@ -85,6 +88,9 @@ class penjualController extends Controller
      */
     public function edit(string $id)
     {
+        if (!session("penjual") || session("admin")) {
+            return redirect()->back()->with("error", "Kamu tidak Memiliki akses");
+        }
         $hewan = Hewan::where("id", $id)->first();
         return view("hewan.edit", compact("hewan"));
     }
@@ -172,7 +178,7 @@ class penjualController extends Controller
         }
 
         $penjual->save();
-
+        Alert::success('Berhasil', 'Prodile Berasil di update ');
         return redirect()->route('profile.penjual')->with('success', 'Profil berhasil diperbarui.');
     }
 

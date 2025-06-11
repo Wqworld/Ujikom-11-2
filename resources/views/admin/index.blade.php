@@ -1,189 +1,117 @@
 <x-layout>
-    <x-nav-bar></x-nav-bar>
 
-
-<button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-   <span class="sr-only">Open sidebar</span>
-   <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-   <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
-   </svg>
-</button>
-
-<aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-   <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-      <ul class="space-y-2 font-medium">
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-               <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
-                  <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"/>
-                  <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"/>
-               </svg>
-               <span class="ms-3">Dashboard</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-               <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
-                  <path d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"/>
-               </svg>
-               <span class="flex-1 ms-3 whitespace-nowrap">Kanban</span>
-               <span class="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-               <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z"/>
-               </svg>
-               <span class="flex-1 ms-3 whitespace-nowrap">Inbox</span>
-               <span class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-               <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                  <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"/>
-               </svg>
-               <span class="flex-1 ms-3 whitespace-nowrap">Users</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-               <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-                  <path d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z"/>
-               </svg>
-               <span class="flex-1 ms-3 whitespace-nowrap">Products</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-               <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"/>
-               </svg>
-               <span class="flex-1 ms-3 whitespace-nowrap">Sign In</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-               <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.96 2.96 0 0 0 .13 5H5Z"/>
-                  <path d="M6.737 11.061a2.961 2.961 0 0 1 .81-1.515l6.117-6.116A4.839 4.839 0 0 1 16 2.141V2a1.97 1.97 0 0 0-1.933-2H7v5a2 2 0 0 1-2 2H0v11a1.969 1.969 0 0 0 1.933 2h12.134A1.97 1.97 0 0 0 16 18v-3.093l-1.546 1.546c-.413.413-.94.695-1.513.81l-3.4.679a2.947 2.947 0 0 1-1.85-.227 2.96 2.96 0 0 1-1.635-3.257l.681-3.397Z"/>
-                  <path d="M8.961 16a.93.93 0 0 0 .189-.019l3.4-.679a.961.961 0 0 0 .49-.263l6.118-6.117a2.884 2.884 0 0 0-4.079-4.078l-6.117 6.117a.96.96 0 0 0-.263.491l-.679 3.4A.961.961 0 0 0 8.961 16Zm7.477-9.8a.958.958 0 0 1 .68-.281.961.961 0 0 1 .682 1.644l-.315.315-1.36-1.36.313-.318Zm-5.911 5.911 4.236-4.236 1.359 1.359-4.236 4.237-1.7.339.341-1.699Z"/>
-               </svg>
-               <span class="flex-1 ms-3 whitespace-nowrap">Sign Up</span>
-            </a>
-         </li>
-      </ul>
-   </div>
-</aside>
-
-<div class="p-4 sm:ml-64">
-   <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-      <div class="grid grid-cols-3 gap-4 mb-4">
-         <div class="flex items-center justify-center h-24 rounded-sm bg-gray-50 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center h-24 rounded-sm bg-gray-50 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center h-24 rounded-sm bg-gray-50 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
+   <x-side-bar>
+      <div class="m-5">
+         <p class="text-gray-500 text-xl sm:text-lg">Selamat Datang admin</p>
+         <h1 class="font-bold text-gray-600 xl:text-5xl text-3xl sm:text-2xl">
+            {{ $admin->nama_admin }}
+         </h1>
       </div>
-      <div class="flex items-center justify-center h-48 mb-4 rounded-sm bg-gray-50 dark:bg-gray-800">
-         <p class="text-2xl text-gray-400 dark:text-gray-500">
-            <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-            </svg>
-         </p>
-      </div>
-      <div class="grid grid-cols-2 gap-4 mb-4">
-         <div class="flex items-center justify-center rounded-sm bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center rounded-sm bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center rounded-sm bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center rounded-sm bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-      </div>
-      <div class="flex items-center justify-center h-48 mb-4 rounded-sm bg-gray-50 dark:bg-gray-800">
-         <p class="text-2xl text-gray-400 dark:text-gray-500">
-            <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-            </svg>
-         </p>
-      </div>
-      <div class="grid grid-cols-2 gap-4">
-         <div class="flex items-center justify-center rounded-sm bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center rounded-sm bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center rounded-sm bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center rounded-sm bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-      </div>
-   </div>
-</div>
 
-    Halaman admin
+      <div class="m-5">
+         <!-- Dari Uiverse.io by uctteam jumlah hewan -->
+         <div class="grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-2 max-[500px]:grid-cols-1 px-3">
+            <a href="{{ route('admin.hewan') }}"
+               class="group w-full rounded-lg bg-[rgb(41,49,79)]  p-5 transition relative duration-300 cursor-pointer hover:translate-y-[3px] hover:shadow-[0_-8px_0px_0px_#605e80]">
+               <p class="text-white text-xl ">Jumlah Hewan</p>
+               <p class="text-white text-[30px]">{{ $jumlahhewan }}</p>
+               <svg accesskey="" xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 512 512"
+                  y="0" x="0" height="36" width="36" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="group-hover:opacity-100 absolute right-[10%] top-[50%] translate-y-[-50%] opacity-20 transition group-hover:scale-110 duration-300">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                     <path class="" data-original="#000000" opacity="1" fill="#ffffff"
+                        d="M16.44 309.74c-2.44 11.52-2.82 21.72-1.14 30.61 2.57 13.13 9.94 29.4 25.12 29.08 1.13-.03 5.08-.63 7.58-1.43 0 26.51 10.75 50.51 28.12 67.88 24.77 24.77 61.13 34.06 94.65 24.34C187.28 491.97 220.02 512 256 512c35.98 0 68.72-20.03 85.23-51.78 33.52 9.72 69.88.43 94.65-24.34C453.25 418.51 464 394.51 464 368c2.5.8 6.45 1.4 7.58 1.43 15.18.32 22.55-15.95 25.12-29.08 1.68-8.89 1.3-19.09-1.14-30.61C506.33 293.83 512 275.21 512 256c0-35.98-20.03-68.72-51.78-85.23 9.71-33.52.44-69.87-24.34-94.65-24.77-24.78-61.12-34.05-94.65-24.34C324.72 20.03 291.97 0 256 0c-35.97 0-68.72 20.03-85.23 51.78-33.53-9.71-69.88-.44-94.65 24.34-24.78 24.78-34.05 61.13-24.34 94.65C20.03 187.28 0 220.02 0 256c0 19.21 5.67 37.83 16.44 53.74zM256 480c-34.46 0-61.85-26.98-63.88-60.02l-7.02-2.91c-24.94 20.91-62.54 20.01-86.36-3.81C87.16 401.68 80 385.67 80 368c0-5.84.79-11.51 2.25-16.88 3.9-2.84 7.26-5.96 10.07-9.36 13.24-16.01 18.13-20.42 15.82-41.15-4.79-12.3-6.07-36.94-5.81-53.6.26-16.66.64-25.63 6.8-38.79 1.37-2.75-21.6 7.52-24.51 9.37-22.59 14.4-34.88 32.69-50.56 54.59A64.403 64.403 0 0 1 32 256c0-34.17 27-61.79 60.02-63.87l2.92-7.02c-20.89-24.87-20.09-62.47 3.8-86.37 23.9-23.89 61.49-24.69 86.36-3.81l7.02-2.91C194.15 58.98 221.53 32 256 32s61.85 26.98 63.88 60.02l7.02 2.91c24.87-20.88 62.46-20.08 86.36 3.81 23.89 23.9 24.69 61.5 3.8 86.37l2.92 7.02C453 194.21 480 221.83 480 256c0 5.59-.72 11.01-2.06 16.18-15.68-21.9-27.97-40.19-50.56-54.59-2.91-1.85-25.88-12.12-24.51-9.37 6.16 13.16 6.54 22.13 6.8 38.79.26 16.66-1.02 41.3-5.81 53.6-2.31 20.73 2.58 25.14 15.82 41.15 2.81 3.4 6.17 6.52 10.07 9.36A64.32 64.32 0 0 1 432 368c0 17.67-7.16 33.68-18.74 45.26-23.82 23.82-61.42 24.72-86.36 3.81l-7.02 2.91C317.85 453.02 290.46 480 256 480zM145.75 196.32c-7 20.16-10.51 39.72-10.51 58.69 0 26.31 3.46 50.23 10.38 71.76C162.49 379.24 197 421 256 421c59.32 0 93.38-41.36 110.16-94.23 6.83-21.53 10.25-45.45 10.25-71.76 0-14.35-1.71-28.36-5.13-42.03-10.42 0-19.94-3.89-28.57-11.66-8.63-7.78-14.05-16.96-16.28-27.56-4.61 5.3-10.08 9.74-16.4 13.33-6.32 3.59-12.64 5.38-18.96 5.38-10.43 0-21.79-6.49-34.09-19.47-2.05 9.56-6.75 17.89-14.1 24.98-7.34 7.09-15.72 10.64-25.11 10.64-7.35 0-14.4-2.86-21.15-8.59-6.75-5.72-11.83-12.34-15.24-19.86-7.19 7.19-14.92 16.66-27.94 16.66-2.4 0-5.34-.01-7.69-.51zm73.68 68.82c0 15.15-12.28 27.43-27.43 27.43s-27.43-12.28-27.43-27.43c0-15.14 12.28-27.42 27.43-27.42s27.43 12.28 27.43 27.42zM320 292.57c-15.15 0-27.43-12.28-27.43-27.43 0-15.14 12.28-27.42 27.43-27.42s27.43 12.28 27.43 27.42c0 15.15-12.28 27.43-27.43 27.43z">
+                     </path>
+                  </g>
+               </svg>
+            </a>
 
-    <h1>
+            <a href="{{ route('admin.penjual') }}"
+               class="group w-full rounded-lg bg-[rgb(41,49,79)]  p-5 transition relative duration-300 cursor-pointer hover:translate-y-[3px] hover:shadow-[0_-8px_0px_0px_#605e80]">
+               <p class="text-white text-xl ">Jumlah Penjual</p>
+               <p class="text-white text-[30px]">{{ $jumlahpenjual }}</p>
+               <svg accesskey="" xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 512 512"
+                  y="0" x="0" height="36" width="36" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="group-hover:opacity-100 absolute right-[10%] top-[50%] translate-y-[-50%] opacity-20 transition group-hover:scale-110 duration-300">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                     <path class="" data-original="#000000" opacity="1" fill="#ffffff"
+                        d="M16.44 309.74c-2.44 11.52-2.82 21.72-1.14 30.61 2.57 13.13 9.94 29.4 25.12 29.08 1.13-.03 5.08-.63 7.58-1.43 0 26.51 10.75 50.51 28.12 67.88 24.77 24.77 61.13 34.06 94.65 24.34C187.28 491.97 220.02 512 256 512c35.98 0 68.72-20.03 85.23-51.78 33.52 9.72 69.88.43 94.65-24.34C453.25 418.51 464 394.51 464 368c2.5.8 6.45 1.4 7.58 1.43 15.18.32 22.55-15.95 25.12-29.08 1.68-8.89 1.3-19.09-1.14-30.61C506.33 293.83 512 275.21 512 256c0-35.98-20.03-68.72-51.78-85.23 9.71-33.52.44-69.87-24.34-94.65-24.77-24.78-61.12-34.05-94.65-24.34C324.72 20.03 291.97 0 256 0c-35.97 0-68.72 20.03-85.23 51.78-33.53-9.71-69.88-.44-94.65 24.34-24.78 24.78-34.05 61.13-24.34 94.65C20.03 187.28 0 220.02 0 256c0 19.21 5.67 37.83 16.44 53.74zM256 480c-34.46 0-61.85-26.98-63.88-60.02l-7.02-2.91c-24.94 20.91-62.54 20.01-86.36-3.81C87.16 401.68 80 385.67 80 368c0-5.84.79-11.51 2.25-16.88 3.9-2.84 7.26-5.96 10.07-9.36 13.24-16.01 18.13-20.42 15.82-41.15-4.79-12.3-6.07-36.94-5.81-53.6.26-16.66.64-25.63 6.8-38.79 1.37-2.75-21.6 7.52-24.51 9.37-22.59 14.4-34.88 32.69-50.56 54.59A64.403 64.403 0 0 1 32 256c0-34.17 27-61.79 60.02-63.87l2.92-7.02c-20.89-24.87-20.09-62.47 3.8-86.37 23.9-23.89 61.49-24.69 86.36-3.81l7.02-2.91C194.15 58.98 221.53 32 256 32s61.85 26.98 63.88 60.02l7.02 2.91c24.87-20.88 62.46-20.08 86.36 3.81 23.89 23.9 24.69 61.5 3.8 86.37l2.92 7.02C453 194.21 480 221.83 480 256c0 5.59-.72 11.01-2.06 16.18-15.68-21.9-27.97-40.19-50.56-54.59-2.91-1.85-25.88-12.12-24.51-9.37 6.16 13.16 6.54 22.13 6.8 38.79.26 16.66-1.02 41.3-5.81 53.6-2.31 20.73 2.58 25.14 15.82 41.15 2.81 3.4 6.17 6.52 10.07 9.36A64.32 64.32 0 0 1 432 368c0 17.67-7.16 33.68-18.74 45.26-23.82 23.82-61.42 24.72-86.36 3.81l-7.02 2.91C317.85 453.02 290.46 480 256 480zM145.75 196.32c-7 20.16-10.51 39.72-10.51 58.69 0 26.31 3.46 50.23 10.38 71.76C162.49 379.24 197 421 256 421c59.32 0 93.38-41.36 110.16-94.23 6.83-21.53 10.25-45.45 10.25-71.76 0-14.35-1.71-28.36-5.13-42.03-10.42 0-19.94-3.89-28.57-11.66-8.63-7.78-14.05-16.96-16.28-27.56-4.61 5.3-10.08 9.74-16.4 13.33-6.32 3.59-12.64 5.38-18.96 5.38-10.43 0-21.79-6.49-34.09-19.47-2.05 9.56-6.75 17.89-14.1 24.98-7.34 7.09-15.72 10.64-25.11 10.64-7.35 0-14.4-2.86-21.15-8.59-6.75-5.72-11.83-12.34-15.24-19.86-7.19 7.19-14.92 16.66-27.94 16.66-2.4 0-5.34-.01-7.69-.51zm73.68 68.82c0 15.15-12.28 27.43-27.43 27.43s-27.43-12.28-27.43-27.43c0-15.14 12.28-27.42 27.43-27.42s27.43 12.28 27.43 27.42zM320 292.57c-15.15 0-27.43-12.28-27.43-27.43 0-15.14 12.28-27.42 27.43-27.42s27.43 12.28 27.43 27.42c0 15.15-12.28 27.43-27.43 27.43z">
+                     </path>
+                  </g>
+               </svg>
+            </a>
 
-        {{ session('admin')->nama_admin }}
-    </h1>
+         </div>
+
+
+         {{-- HEWAN HEWAN --}}
+
+         <div class="mx-5">
+            <h1 class="font-bold text-gray-600 xl:text-5xl text-3xl sm:text-2xl text-center my-5">Hewan Hewan</h1>
+
+            <div class="grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2 max-[500px]:grid-cols-1 px-3">
+               <div
+                  class="group w-full rounded-lg bg-[rgb(41,49,79)]  p-5 transition relative duration-300 cursor-pointer hover:translate-y-[3px] hover:shadow-[0_-8px_0px_0px_#605e80]">
+                  <p class="text-white text-xl ">Jumlah sapi</p>
+                  <p class="text-white text-[30px]">{{ $jumlahSapi }}</p>
+                  <svg accesskey="" xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 512 512"
+                     y="0" x="0" height="36" width="36" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg"
+                     class="group-hover:opacity-100 absolute right-[10%] top-[50%] translate-y-[-50%] opacity-20 transition group-hover:scale-110 duration-300">
+                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                     <g id="SVGRepo_iconCarrier">
+                        <path class="" data-original="#000000" opacity="1" fill="#ffffff"
+                           d="M16.44 309.74c-2.44 11.52-2.82 21.72-1.14 30.61 2.57 13.13 9.94 29.4 25.12 29.08 1.13-.03 5.08-.63 7.58-1.43 0 26.51 10.75 50.51 28.12 67.88 24.77 24.77 61.13 34.06 94.65 24.34C187.28 491.97 220.02 512 256 512c35.98 0 68.72-20.03 85.23-51.78 33.52 9.72 69.88.43 94.65-24.34C453.25 418.51 464 394.51 464 368c2.5.8 6.45 1.4 7.58 1.43 15.18.32 22.55-15.95 25.12-29.08 1.68-8.89 1.3-19.09-1.14-30.61C506.33 293.83 512 275.21 512 256c0-35.98-20.03-68.72-51.78-85.23 9.71-33.52.44-69.87-24.34-94.65-24.77-24.78-61.12-34.05-94.65-24.34C324.72 20.03 291.97 0 256 0c-35.97 0-68.72 20.03-85.23 51.78-33.53-9.71-69.88-.44-94.65 24.34-24.78 24.78-34.05 61.13-24.34 94.65C20.03 187.28 0 220.02 0 256c0 19.21 5.67 37.83 16.44 53.74zM256 480c-34.46 0-61.85-26.98-63.88-60.02l-7.02-2.91c-24.94 20.91-62.54 20.01-86.36-3.81C87.16 401.68 80 385.67 80 368c0-5.84.79-11.51 2.25-16.88 3.9-2.84 7.26-5.96 10.07-9.36 13.24-16.01 18.13-20.42 15.82-41.15-4.79-12.3-6.07-36.94-5.81-53.6.26-16.66.64-25.63 6.8-38.79 1.37-2.75-21.6 7.52-24.51 9.37-22.59 14.4-34.88 32.69-50.56 54.59A64.403 64.403 0 0 1 32 256c0-34.17 27-61.79 60.02-63.87l2.92-7.02c-20.89-24.87-20.09-62.47 3.8-86.37 23.9-23.89 61.49-24.69 86.36-3.81l7.02-2.91C194.15 58.98 221.53 32 256 32s61.85 26.98 63.88 60.02l7.02 2.91c24.87-20.88 62.46-20.08 86.36 3.81 23.89 23.9 24.69 61.5 3.8 86.37l2.92 7.02C453 194.21 480 221.83 480 256c0 5.59-.72 11.01-2.06 16.18-15.68-21.9-27.97-40.19-50.56-54.59-2.91-1.85-25.88-12.12-24.51-9.37 6.16 13.16 6.54 22.13 6.8 38.79.26 16.66-1.02 41.3-5.81 53.6-2.31 20.73 2.58 25.14 15.82 41.15 2.81 3.4 6.17 6.52 10.07 9.36A64.32 64.32 0 0 1 432 368c0 17.67-7.16 33.68-18.74 45.26-23.82 23.82-61.42 24.72-86.36 3.81l-7.02 2.91C317.85 453.02 290.46 480 256 480zM145.75 196.32c-7 20.16-10.51 39.72-10.51 58.69 0 26.31 3.46 50.23 10.38 71.76C162.49 379.24 197 421 256 421c59.32 0 93.38-41.36 110.16-94.23 6.83-21.53 10.25-45.45 10.25-71.76 0-14.35-1.71-28.36-5.13-42.03-10.42 0-19.94-3.89-28.57-11.66-8.63-7.78-14.05-16.96-16.28-27.56-4.61 5.3-10.08 9.74-16.4 13.33-6.32 3.59-12.64 5.38-18.96 5.38-10.43 0-21.79-6.49-34.09-19.47-2.05 9.56-6.75 17.89-14.1 24.98-7.34 7.09-15.72 10.64-25.11 10.64-7.35 0-14.4-2.86-21.15-8.59-6.75-5.72-11.83-12.34-15.24-19.86-7.19 7.19-14.92 16.66-27.94 16.66-2.4 0-5.34-.01-7.69-.51zm73.68 68.82c0 15.15-12.28 27.43-27.43 27.43s-27.43-12.28-27.43-27.43c0-15.14 12.28-27.42 27.43-27.42s27.43 12.28 27.43 27.42zM320 292.57c-15.15 0-27.43-12.28-27.43-27.43 0-15.14 12.28-27.42 27.43-27.42s27.43 12.28 27.43 27.42c0 15.15-12.28 27.43-27.43 27.43z">
+                        </path>
+                     </g>
+                  </svg>
+               </div>
+
+               <div
+                  class="group w-full rounded-lg bg-[rgb(41,49,79)]  p-5 transition relative duration-300 cursor-pointer hover:translate-y-[3px] hover:shadow-[0_-8px_0px_0px_#605e80]">
+                  <p class="text-white text-xl ">Jumlah Domba</p>
+                  <p class="text-white text-[30px]">{{ $jumlahDomba }}</p>
+                  <svg accesskey="" xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 512 512"
+                     y="0" x="0" height="36" width="36" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg"
+                     class="group-hover:opacity-100 absolute right-[10%] top-[50%] translate-y-[-50%] opacity-20 transition group-hover:scale-110 duration-300">
+                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                     <g id="SVGRepo_iconCarrier">
+                        <path class="" data-original="#000000" opacity="1" fill="#ffffff"
+                           d="M16.44 309.74c-2.44 11.52-2.82 21.72-1.14 30.61 2.57 13.13 9.94 29.4 25.12 29.08 1.13-.03 5.08-.63 7.58-1.43 0 26.51 10.75 50.51 28.12 67.88 24.77 24.77 61.13 34.06 94.65 24.34C187.28 491.97 220.02 512 256 512c35.98 0 68.72-20.03 85.23-51.78 33.52 9.72 69.88.43 94.65-24.34C453.25 418.51 464 394.51 464 368c2.5.8 6.45 1.4 7.58 1.43 15.18.32 22.55-15.95 25.12-29.08 1.68-8.89 1.3-19.09-1.14-30.61C506.33 293.83 512 275.21 512 256c0-35.98-20.03-68.72-51.78-85.23 9.71-33.52.44-69.87-24.34-94.65-24.77-24.78-61.12-34.05-94.65-24.34C324.72 20.03 291.97 0 256 0c-35.97 0-68.72 20.03-85.23 51.78-33.53-9.71-69.88-.44-94.65 24.34-24.78 24.78-34.05 61.13-24.34 94.65C20.03 187.28 0 220.02 0 256c0 19.21 5.67 37.83 16.44 53.74zM256 480c-34.46 0-61.85-26.98-63.88-60.02l-7.02-2.91c-24.94 20.91-62.54 20.01-86.36-3.81C87.16 401.68 80 385.67 80 368c0-5.84.79-11.51 2.25-16.88 3.9-2.84 7.26-5.96 10.07-9.36 13.24-16.01 18.13-20.42 15.82-41.15-4.79-12.3-6.07-36.94-5.81-53.6.26-16.66.64-25.63 6.8-38.79 1.37-2.75-21.6 7.52-24.51 9.37-22.59 14.4-34.88 32.69-50.56 54.59A64.403 64.403 0 0 1 32 256c0-34.17 27-61.79 60.02-63.87l2.92-7.02c-20.89-24.87-20.09-62.47 3.8-86.37 23.9-23.89 61.49-24.69 86.36-3.81l7.02-2.91C194.15 58.98 221.53 32 256 32s61.85 26.98 63.88 60.02l7.02 2.91c24.87-20.88 62.46-20.08 86.36 3.81 23.89 23.9 24.69 61.5 3.8 86.37l2.92 7.02C453 194.21 480 221.83 480 256c0 5.59-.72 11.01-2.06 16.18-15.68-21.9-27.97-40.19-50.56-54.59-2.91-1.85-25.88-12.12-24.51-9.37 6.16 13.16 6.54 22.13 6.8 38.79.26 16.66-1.02 41.3-5.81 53.6-2.31 20.73 2.58 25.14 15.82 41.15 2.81 3.4 6.17 6.52 10.07 9.36A64.32 64.32 0 0 1 432 368c0 17.67-7.16 33.68-18.74 45.26-23.82 23.82-61.42 24.72-86.36 3.81l-7.02 2.91C317.85 453.02 290.46 480 256 480zM145.75 196.32c-7 20.16-10.51 39.72-10.51 58.69 0 26.31 3.46 50.23 10.38 71.76C162.49 379.24 197 421 256 421c59.32 0 93.38-41.36 110.16-94.23 6.83-21.53 10.25-45.45 10.25-71.76 0-14.35-1.71-28.36-5.13-42.03-10.42 0-19.94-3.89-28.57-11.66-8.63-7.78-14.05-16.96-16.28-27.56-4.61 5.3-10.08 9.74-16.4 13.33-6.32 3.59-12.64 5.38-18.96 5.38-10.43 0-21.79-6.49-34.09-19.47-2.05 9.56-6.75 17.89-14.1 24.98-7.34 7.09-15.72 10.64-25.11 10.64-7.35 0-14.4-2.86-21.15-8.59-6.75-5.72-11.83-12.34-15.24-19.86-7.19 7.19-14.92 16.66-27.94 16.66-2.4 0-5.34-.01-7.69-.51zm73.68 68.82c0 15.15-12.28 27.43-27.43 27.43s-27.43-12.28-27.43-27.43c0-15.14 12.28-27.42 27.43-27.42s27.43 12.28 27.43 27.42zM320 292.57c-15.15 0-27.43-12.28-27.43-27.43 0-15.14 12.28-27.42 27.43-27.42s27.43 12.28 27.43 27.42c0 15.15-12.28 27.43-27.43 27.43z">
+                        </path>
+                     </g>
+                  </svg>
+               </div>
+
+               <div
+                  class="group w-full rounded-lg bg-[rgb(41,49,79)]  p-5 transition relative duration-300 cursor-pointer hover:translate-y-[3px] hover:shadow-[0_-8px_0px_0px_#605e80]">
+                  <p class="text-white text-xl ">Jumlah Kambing</p>
+                  <p class="text-white text-[30px]">{{ $jumlahKambing }}</p>
+                  <svg accesskey="" xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 512 512"
+                     y="0" x="0" height="36" width="36" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg"
+                     class="group-hover:opacity-100 absolute right-[10%] top-[50%] translate-y-[-50%] opacity-20 transition group-hover:scale-110 duration-300">
+                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                     <g id="SVGRepo_iconCarrier">
+                        <path class="" data-original="#000000" opacity="1" fill="#ffffff"
+                           d="M16.44 309.74c-2.44 11.52-2.82 21.72-1.14 30.61 2.57 13.13 9.94 29.4 25.12 29.08 1.13-.03 5.08-.63 7.58-1.43 0 26.51 10.75 50.51 28.12 67.88 24.77 24.77 61.13 34.06 94.65 24.34C187.28 491.97 220.02 512 256 512c35.98 0 68.72-20.03 85.23-51.78 33.52 9.72 69.88.43 94.65-24.34C453.25 418.51 464 394.51 464 368c2.5.8 6.45 1.4 7.58 1.43 15.18.32 22.55-15.95 25.12-29.08 1.68-8.89 1.3-19.09-1.14-30.61C506.33 293.83 512 275.21 512 256c0-35.98-20.03-68.72-51.78-85.23 9.71-33.52.44-69.87-24.34-94.65-24.77-24.78-61.12-34.05-94.65-24.34C324.72 20.03 291.97 0 256 0c-35.97 0-68.72 20.03-85.23 51.78-33.53-9.71-69.88-.44-94.65 24.34-24.78 24.78-34.05 61.13-24.34 94.65C20.03 187.28 0 220.02 0 256c0 19.21 5.67 37.83 16.44 53.74zM256 480c-34.46 0-61.85-26.98-63.88-60.02l-7.02-2.91c-24.94 20.91-62.54 20.01-86.36-3.81C87.16 401.68 80 385.67 80 368c0-5.84.79-11.51 2.25-16.88 3.9-2.84 7.26-5.96 10.07-9.36 13.24-16.01 18.13-20.42 15.82-41.15-4.79-12.3-6.07-36.94-5.81-53.6.26-16.66.64-25.63 6.8-38.79 1.37-2.75-21.6 7.52-24.51 9.37-22.59 14.4-34.88 32.69-50.56 54.59A64.403 64.403 0 0 1 32 256c0-34.17 27-61.79 60.02-63.87l2.92-7.02c-20.89-24.87-20.09-62.47 3.8-86.37 23.9-23.89 61.49-24.69 86.36-3.81l7.02-2.91C194.15 58.98 221.53 32 256 32s61.85 26.98 63.88 60.02l7.02 2.91c24.87-20.88 62.46-20.08 86.36 3.81 23.89 23.9 24.69 61.5 3.8 86.37l2.92 7.02C453 194.21 480 221.83 480 256c0 5.59-.72 11.01-2.06 16.18-15.68-21.9-27.97-40.19-50.56-54.59-2.91-1.85-25.88-12.12-24.51-9.37 6.16 13.16 6.54 22.13 6.8 38.79.26 16.66-1.02 41.3-5.81 53.6-2.31 20.73 2.58 25.14 15.82 41.15 2.81 3.4 6.17 6.52 10.07 9.36A64.32 64.32 0 0 1 432 368c0 17.67-7.16 33.68-18.74 45.26-23.82 23.82-61.42 24.72-86.36 3.81l-7.02 2.91C317.85 453.02 290.46 480 256 480zM145.75 196.32c-7 20.16-10.51 39.72-10.51 58.69 0 26.31 3.46 50.23 10.38 71.76C162.49 379.24 197 421 256 421c59.32 0 93.38-41.36 110.16-94.23 6.83-21.53 10.25-45.45 10.25-71.76 0-14.35-1.71-28.36-5.13-42.03-10.42 0-19.94-3.89-28.57-11.66-8.63-7.78-14.05-16.96-16.28-27.56-4.61 5.3-10.08 9.74-16.4 13.33-6.32 3.59-12.64 5.38-18.96 5.38-10.43 0-21.79-6.49-34.09-19.47-2.05 9.56-6.75 17.89-14.1 24.98-7.34 7.09-15.72 10.64-25.11 10.64-7.35 0-14.4-2.86-21.15-8.59-6.75-5.72-11.83-12.34-15.24-19.86-7.19 7.19-14.92 16.66-27.94 16.66-2.4 0-5.34-.01-7.69-.51zm73.68 68.82c0 15.15-12.28 27.43-27.43 27.43s-27.43-12.28-27.43-27.43c0-15.14 12.28-27.42 27.43-27.42s27.43 12.28 27.43 27.42zM320 292.57c-15.15 0-27.43-12.28-27.43-27.43 0-15.14 12.28-27.42 27.43-27.42s27.43 12.28 27.43 27.42c0 15.15-12.28 27.43-27.43 27.43z">
+                        </path>
+                     </g>
+                  </svg>
+               </div>
+            </div>
+         </div>
+
+   </x-side-bar>
 
 </x-layout>
