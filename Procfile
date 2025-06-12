@@ -1,0 +1,1 @@
+web: php artisan migrate --force && php artisan key:generate && php artisan config:cache && php -S 0.0.0.0:8080 -t public
